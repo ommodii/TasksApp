@@ -11,50 +11,13 @@
   --color-error: #ef4444;
 }
 
-/* Global Reset & Scroll Behavior */
-@layer base {
-  :root {
-    color-scheme: dark; /* Forces browser UI elements (scrollbars/bounce) to dark */
-  }
-  
-  html, body {
-    background-color: #000000 !important;
-    color: #F5F5F7;
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    /* Prevents the white 'bounce' background on iOS and Mac */
-    overscroll-behavior: none; 
-  }
-
-  #root {
-    background-color: #000000;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+/* The only fix you actually need */
+html, body {
+  background-color: #000000;
+  color: #F5F5F7;
+  margin: 0;
 }
 
-/* Custom Text Selection */
-::selection {
-  background-color: #F5F5F7;
-  color: #000000;
-}
-
-/* Custom Scrollbar Styling (Optional for the Terminal look) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1a1a1a;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #3F3F46;
+#root {
+  min-height: 100vh;
 }
